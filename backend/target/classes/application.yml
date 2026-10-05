@@ -1,0 +1,31 @@
+server:
+  port: ${APP_PORT:8080}
+
+spring:
+  application:
+    name: kafka-demo
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+
+demo:
+  topic:
+    main: demo-topic
+    dlt: demo-topic-dlt
+    initial-partitions: 2
+  consumer:
+    group-id: demo-group
+    initial-count: 2
+  producer:
+    initial-interval-ms: 1000
+    initial-error-rate-percent: 0
+
+logging:
+  level:
+    root: INFO
+    com.demo.kafka: INFO
+    org.apache.kafka: WARN

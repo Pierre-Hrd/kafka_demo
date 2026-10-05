@@ -1,0 +1,13 @@
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/DemoKafkaApplication.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/admin/KafkaAdminService.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/config/WebSocketConfig.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/consumer/ConsumerManager.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/consumer/ConsumerWorker.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/controller/ConsumerController.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/controller/ProducerController.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/controller/StateController.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/controller/TopicController.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/model/events/DemoEvent.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/model/events/Events.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/producer/ProducerService.java
+/home/ressources.racine.local/ephour/src/perso/demo_kafka/backend/src/main/java/com/demo/kafka/ws/EventBroadcaster.java

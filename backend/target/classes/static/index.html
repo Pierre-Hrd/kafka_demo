@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kafka Demo Visuelle</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="app-header">
+    <h1>🚂 Kafka — Démo visuelle</h1>
+    <div class="connection">
+        <span id="conn-dot" class="dot dot-off"></span>
+        <span id="conn-label">connexion…</span>
+    </div>
+</header>
+
+<section class="controls">
+
+    <div class="panel">
+        <h2>Producteur</h2>
+        <div class="row">
+            <button id="btn-producer-toggle" class="btn btn-primary">Démarrer</button>
+            <label>Intervalle (ms)
+                <input id="input-interval" type="number" min="50" step="50" value="1000">
+            </label>
+            <button id="btn-apply-interval" class="btn">Appliquer</button>
+        </div>
+        <div class="row">
+            <label>Taux d'erreur (%)
+                <input id="input-error-rate" type="range" min="0" max="100" value="0">
+                <span id="label-error-rate">0%</span>
+            </label>
+            <button id="btn-trigger-error" class="btn btn-danger">Générer 1 message en erreur</button>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>Topic / Partitions</h2>
+        <div class="row">
+            <span>Partitions (fixe) : <strong id="label-partitions">-</strong></span>
+        </div>
+        <p class="hint">Le nombre de partitions est fixé pour cette démo afin de garder une vue stable et lisible.</p>
+    </div>
+
+    <div class="panel">
+        <h2>Consumers</h2>
+        <div class="row">
+            <button id="btn-consumer-minus" class="btn">➖</button>
+            <span id="label-consumer-count">0</span> consumer(s)
+            <button id="btn-consumer-plus" class="btn">➕</button>
+        </div>
+        <p class="hint">Changer le nombre de consumers déclenche un vrai rebalance Kafka.</p>
+    </div>
+
+</section>
+
+<section class="stage" id="stage">
+    <div class="col producer-col">
+        <h3>Producteur</h3>
+        <div class="box producer-box" id="producer-box">📦</div>
+    </div>
+
+    <div class="col topic-col">
+        <h3>Topic <span id="topic-name"></span></h3>
+        <div class="lanes" id="lanes"></div>
+    </div>
+
+    <div class="col consumers-col">
+        <h3>Consumers</h3>
+        <div class="consumers" id="consumers"></div>
+        <h3>Dead Letter Topic</h3>
+        <div class="box dlt-box" id="dlt-box">☠️</div>
+    </div>
+</section>
+
+<section class="log-panel">
+    <h2>Journal des événements</h2>
+    <div id="log" class="log"></div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
